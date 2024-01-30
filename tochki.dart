@@ -9,7 +9,12 @@ class Point {
     return Point(0, 0, 0);
   }
 
-  // Factory-конструктор для создания точки с заданными координатами [1, 1, 1]
   factory Point.unit() {
     return Point(1, 1, 1);
+  }
+
+  // Factory-конструктор для создания единичного вектора в направлении заданной точки
+  factory Point.unitVector(Point point) {
+    final length = point.distanceTo(Point.origin());
+    return Point(point.x / length, point.y / length, point.z / length);
   }
