@@ -14,4 +14,17 @@ class MathUtils {
     return (a * b).abs() ~/ gcd(a, b);  // Возвращаем НОК, используя НОД
   }
 
-  
+  // Метод для разложения числа на простые множители
+  static List<int> primeFactors(int number) {
+    List<int> factors = [];  // Создаем пустой список для хранения множителей
+
+    for (int i = 2; i <= number; i++) {
+      while (number % i == 0) {
+        factors.add(i);       // Добавляем i в список множителей
+        number = number ~/ i;  // Делим число на i до тех пор, пока делится
+      }
+    }
+
+    return factors;  // Возвращаем список простых множителей
+  }
+}
