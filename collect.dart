@@ -11,20 +11,3 @@ class WordCounter {
     return wordCountMap;
   }
 }
-
-void main() {
-  List<String> wordCollection = [
-    "apple",
-    "orange",
-    "apple",
-    "banana",
-    "orange",
-    "apple"
-  ];
-
-  // Подсчитываем вхождения слов в коллекции
-  Map<String, int> wordCountMap = WordCounter.countWords(wordCollection);
-
-  // Выводим результат
-  print('Количество вхождений слов в коллекции: $wordCountMap');
-}
