@@ -18,3 +18,12 @@ class DigitExtractor {
     List<String> words =
         input.split(',').map((word) => word.trim().toLowerCase()).toList();
 
+    // Отображаем каждое слово на соответствующую цифру и убираем повторы
+    Set<int> uniqueDigits = words
+        .where((word) => englishWords.containsKey(word))
+        .map((word) => englishWords[word]!)
+        .toSet();
+
+    return uniqueDigits.toList();
+  }
+}
