@@ -3,10 +3,13 @@ import 'dart:math';
 class Point {
   double x, y, z;
 
-  // Конструктор для создания точки с заданными координатами
   Point(this.x, this.y, this.z);
 
-  // Factory-конструктор для создания точки в начале координат
   factory Point.origin() {
     return Point(0, 0, 0);
+  }
+
+  // Factory-конструктор для создания точки с заданными координатами [1, 1, 1]
+  factory Point.unit() {
+    return Point(1, 1, 1);
   }
