@@ -1,3 +1,8 @@
+/*
+Реализуйте методы для преобразования целых чисел из 
+десятичной системы в двоичную и обратно
+*/
+
 class BinaryConverter {
   static String decimalToBinary(int decimal) {
     if (decimal == 0) {

@@ -1,3 +1,8 @@
+/*
+Есть коллекция слов. Реализуйте метод, возвращающий Map. 
+Данный Map должен соотносить слово и количество его вхождений в данную коллекцию.
+*/
+
 class WordCounter {
   static Map<String, int> countWords(List<String> words) {
     Map<String, int> wordCountMap = {};  // Создаем пустой Map для хранения подсчета слов
