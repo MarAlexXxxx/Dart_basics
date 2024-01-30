@@ -25,7 +25,6 @@ class Point {
     return sqrt(dx * dx + dy * dy + dz * dz);
   }
 
-  // Метод для вычисления площади треугольника, образованного тремя точками
   double triangleArea(Point second, Point third) {
     final a = distanceTo(second);
     final b = distanceTo(third);
@@ -33,4 +32,17 @@ class Point {
     final s = (a + b + c) / 2;
     return sqrt(s * (s - a) * (s - b) * (s - c));
   }
+}
+
+void main() {
+  Point pointA = Point(1, 2, 3);
+  Point pointB = Point.origin();
+  Point pointC = Point.unit();
+
+  print(
+      'Расстояние от точки A до начала координат: ${pointA.distanceTo(pointB)}');
+  print('Площадь треугольника ABC: ${pointA.triangleArea(pointB, pointC)}');
+
+  Point unitVector = Point.unitVector(Point(2, 2, 2));
+  print('Единичный вектор в направлении [2, 2, 2]: $unitVector');
 }
