@@ -28,3 +28,21 @@ class MathUtils {
     return factors;  // Возвращаем список простых множителей
   }
 }
+
+void main() {
+  int num1 = 36;
+  int num2 = 48;
+
+  // Вычисление НОДа и НОКа
+  int gcdResult = MathUtils.gcd(num1, num2);
+  int lcmResult = MathUtils.lcm(num1, num2);
+
+  print('НОД($num1, $num2) = $gcdResult');
+  print('НОК($num1, $num2) = $lcmResult');
+
+  // Разложение числа на простые множители
+  int numberToFactorize = 72;
+  List<int> primeFactorsList = MathUtils.primeFactors(numberToFactorize);
+
+  print('Простые множители числа $numberToFactorize: $primeFactorsList');
+}
