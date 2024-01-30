@@ -1,5 +1,4 @@
 class BinaryConverter {
-  // Метод для преобразования целого числа из десятичной системы в двоичную
   static String decimalToBinary(int decimal) {
     if (decimal == 0) {
       return '0';
@@ -14,7 +13,6 @@ class BinaryConverter {
     return binary;
   }
 
-  // Метод для преобразования целого числа из двоичной системы в десятичную
   static int binaryToDecimal(String binary) {
     int decimal = 0;
     int length = binary.length;
@@ -26,4 +24,17 @@ class BinaryConverter {
 
     return decimal;
   }
+}
+
+void main() {
+  int decimalNumber = 42;
+
+  // Преобразование из десятичной системы в двоичную
+  String binaryRepresentation = BinaryConverter.decimalToBinary(decimalNumber);
+  print('$decimalNumber в двоичной системе: $binaryRepresentation');
+
+  // Преобразование из двоичной системы в десятичную
+  String binaryNumber = '101010';
+  int decimalResult = BinaryConverter.binaryToDecimal(binaryNumber);
+  print('$binaryNumber в десятичной системе: $decimalResult');
 }
