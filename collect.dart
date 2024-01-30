@@ -20,7 +20,6 @@ void main() {
     "apple"
   ];
 
-  // Подсчитываем вхождения слов в коллекции
   Map<String, int> wordCountMap = WordCounter.countWords(wordCollection);
 
   print('Количество вхождений слов в коллекции: $wordCountMap');
