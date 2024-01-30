@@ -13,3 +13,8 @@ class DigitExtractor {
       'eight': 8,
       'nine': 9,
     };
+
+    // Разбиваем строку на слова, удаляем лишние пробелы, приводим к нижнему регистру
+    List<String> words =
+        input.split(',').map((word) => word.trim().toLowerCase()).toList();
+
