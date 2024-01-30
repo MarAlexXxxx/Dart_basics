@@ -19,14 +19,3 @@ class NumberExtractor {
 
     return numbers;
   }
-}
-
-void main() {
-  String inputString = "Цена составляет 42.75 долларов, а количество - 10";
-
-  // Извлекаем числа из строки
-  List<num> extractedNumbers = NumberExtractor.extractNumbers(inputString);
-
-  // Выводим результат
-  print('Извлеченные числа: $extractedNumbers');
-}
